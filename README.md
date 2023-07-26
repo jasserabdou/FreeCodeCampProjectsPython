@@ -1,7 +1,7 @@
 # FreeCodeCampProjectsPython
 ---
 ```
-git clone 
+git clone https://github.com/jasserabdou/FreeCodeCampProjectsPython.git
 ```
 
 This repository contains four Python projects that offer different functionalities.
