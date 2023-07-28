@@ -1,10 +1,6 @@
-# FreeCodeCampProjectsPython
----
-```
-git clone https://github.com/jasserabdou/FreeCodeCampProjectsPython.git
-```
+# FreeCodeCamp Python Projects
 
-This repository contains four Python projects that offer different functionalities.
+This repository contains five Python projects that offer different functionalities.
 
 ## Project 1: Arithmetic Formatter
 
@@ -14,7 +10,7 @@ The `Arithmetic_formatter.py` script defines a function `arithmetic_arranger` th
 
 **Usage Example:**
 ```python
-from Arithmetic_formatter import arithmetic_arranger
+from FreeCodeCampProjectsPython.Arithmetic_formatter import arithmetic_arranger
 
 problems = ["32 + 698", "3801 - 2", "45 + 43", "123 + 49"]
 formatted_problems = arithmetic_arranger(problems)
@@ -29,7 +25,7 @@ The `Budget_app.py` script defines a class `Category` that represents a budget c
 
 **Usage Example:**
 ```python
-from Budget_app import Category, create_spend_chart
+from FreeCodeCampProjectsPython.Budget_app import Category, create_spend_chart
 
 food = Category("Food")
 clothing = Category("Clothing")
@@ -56,7 +52,7 @@ The `Time_calculator.py` script defines a function `add_time` that calculates th
 
 **Usage Example:**
 ```python
-from Time_calculator import add_time
+from FreeCodeCampProjectsPython.Time_calculator import add_time
 
 print(add_time("3:00 PM", "3:10"))
 print(add_time("11:30 AM", "2:32", "Monday"))
@@ -70,16 +66,44 @@ print(add_time("6:30 PM", "205:12"))
 
 File: `Polygon_area_calculator.py`
 
-The `Polygon_area_calculator.py` script defines a `Hat` class that represents a hat containing different colored balls. It provides methods to draw a specified number of balls randomly from the hat. It also defines an `experiment` function that performs an experiment by drawing balls from the hat and calculating the probability of drawing expected balls. This function allows you to test different experiments with the hat.
+The `Polygon_area_calculator.py` script defines a `Rectangle` class and a `Square` class that can be used to calculate the area, perimeter, and other properties of rectangles and squares. The classes provide methods to perform various calculations and can be used to work with different shapes.
 
 **Usage Example:**
 ```python
-from Polygon_area_calculator import Hat, experiment
+from FreeCodeCampProjectsPython.Polygon_area_calculator import Rectangle, Square
+
+rect = Rectangle(10, 5)
+print(rect.get_area())
+rect.set_height(3)
+print(rect.get_perimeter())
+print(rect)
+print(rect.get_picture())
+
+sq = Square(9)
+print(sq.get_area())
+sq.set_side(4)
+print(sq.get_diagonal())
+print(sq)
+print(sq.get_picture())
+
+rect.set_height(8)
+rect.set_width(16)
+print(rect.get_amount_inside(sq))
+```
+
+## Project 5: Probability Calculator
+
+File: `Probability_calculator.py`
+
+The `Probability_calculator.py` script defines a `Hat` class that represents a hat containing different colored balls. It provides methods to draw a specified number of balls randomly from the hat. It also defines an `experiment` function that performs an experiment by drawing balls from the hat and calculating the probability of drawing expected balls. This function allows you to test different experiments with the hat.
+
+**Usage Example:**
+```python
+from FreeCodeCampProjectsPython.Probability_calculator import Hat, experiment
 
 hat = Hat(black=6, red=4, green=3)
 probability = experiment(hat=hat, expected_balls={"red": 2, "green": 1}, num_balls_drawn=5, num_experiments=2000)
 print("Probability:", probability)
 ```
-
 ---
 
